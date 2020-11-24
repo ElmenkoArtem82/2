@@ -1,0 +1,459 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: georgia, serif; /*основной шрифт страницы*/
+}
+
+div {
+  /*outline: 1px solid #f00;*/
+}
+
+.clearfix {
+  clear: both;
+}
+
+a img {
+  border: none; /*убираем оконтовку у картинок-ссылок в старых IE*/
+}
+
+h1, h2, h3, h4, h5, h6, p { /*сброс отступов у текстовых элементов*/
+  margin: 0 0 20px;
+  padding: 0;
+  font-family: arial, sans-serif;
+}
+
+p { /*общие свойства для параграфов*/
+  color: #555;
+}
+
+h1 span {
+  color: #fff; /*цвет текста заголовка*/
+  background: #808080; /*цвет фона, 50% серый*/
+  font-weight: normal;
+  padding: 3px 10px 5px; /*внутренние отступы границы фона от текста*/
+  font-size: 28px;
+  font-family: georgia, serif;
+}
+
+.shapka {
+  height: 178px; /*высота блока шапка*/
+  background: url(../images/fon-shapka.png) repeat-x; /*фон для шапки*/
+}
+ 
+.baner {
+  height: 316px; /*высота блока банер*/
+  background: #808080 url(../images/fon-baner.png) no-repeat top center; /*добавляем фон и выравниваем его по центру*/
+}
+
+.baner ul { /* обнуляем отступы у списка для слайдера */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ 
+.xleb {
+  height: 58px; /*высота блока хлебные крошки*/
+  background: url(../images/fon-xleb.png) repeat-x; /*фон для хлебных крошек*/
+}
+ 
+.content {
+  min-height: 400px; /*минимальная высота блока содержание*/
+}
+ 
+.podval {
+  min-height: 200px; /*минимальная высота блока подвал*/
+  background: url(../images/fon-podval.png) repeat-x; /*фон для подвала*/
+}
+
+.w960 {
+  width: 960px;
+  margin: 0 auto; /*выравнивание блока по центру*/
+  position: relative; /*для позиционирования внутрих блоков*/
+}
+
+.left-col { /*левая колонка*/
+  width: 620px;
+  float: left;
+  padding: 0 10px;
+  position: relative;
+}
+
+.right-col { /*правая колонка*/
+  width: 300px;
+  float: right;
+  padding: 0 10px;
+}
+
+.logo {
+  margin-top: 20px;
+}
+
+.name {
+  position: absolute; /*абсолютное позиционирование*/
+  top: 122px; /*отступ от верхнего края блока-родителя*/
+  left: 170px; /*отступ от левого края блока родителя*/
+  color: #fff; /*цвет надписи*/
+  font-style: italic; /*курсив*/
+}
+
+.label {
+  position: absolute; /*позиционируем блок*/
+  top: 0; /*в верхний*/
+  right: 0; /*правый угол*/
+  width: 320px; /*ширина блока*/
+  height: 78px;  /*высота блока*/
+  background: url(../images/label.png) no-repeat top center; /*картика ярлыка*/
+  color: #fff; /*цвет текста внутри блока*/
+  font-size: 24px; /*размер шрифта*/
+  text-align: center; /*выравниваем текст по центру*/
+  padding-top: 5px; /*отодвигаем текст от верхней границы*/
+}
+
+.label p {
+  color: #fff;
+  font-family: georgia, serif;
+}
+
+.main-menu {
+  position: absolute; /*позиционируем блок с меню*/
+  top: 95px; /*по верхнему*/
+  right: 0; /*и правому краю*/
+}
+
+.ma-menu ul {
+  list-style: none; /*убираем маркеры у списка*/
+  margin: 0; /*обнуляем отсупы*/
+  padding: 0;
+}
+
+.main-menu ul li {
+  display: inline; /*элементы списка в линию*/
+}
+
+.main-menu ul li a {
+  text-transform: lowercase;
+  color: #fff;
+  text-decoration: none; /*убираем подчеркивание*/
+  padding: 2px 15px 5px;
+  font-size: 22px;
+}
+
+.main-menu ul li.current a {
+	background: yellow;
+	color: #000;
+	border-radius: 5px;
+}
+
+.main-menu ul li:not(.current) a:hover {
+  background: #800d0d; /*цвет фона кнопки при наведении курсора*/
+}
+
+.switch {
+  text-align: center;  /*выравниваем содержание блока по центру*/
+  padding: 10px; /*выравниваем кнопки по вертикали*/
+}
+
+.switch a {
+  margin-right: 5px; /*расстояние между кнопками*/
+}
+
+.order {
+  display: block;
+  width: 300px;
+  height: 50px;
+  background: url(../images/fon-order.png) no-repeat;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 32px;
+  font-style: italic;
+  padding-top: 7px;
+  margin-top: -23px;
+  margin-bottom: 20px;
+}
+
+.cat-item {
+  width: 194px; /*ширина карточки товара*/
+  position: relative;
+  float: left; /*включаем обтекание*/
+  margin-right: 12px; /*отступы между карточками*/
+  margin-bottom: 12px;
+}
+
+.cat-item img {
+  border: 3px solid #808080;
+  width: 100%;
+  /*рамка у картинки*/
+}
+
+.cat-item p {
+  margin: 0; /*обнуляем отступы у параграфа*/
+  position: absolute; /*позиционируем название над фото*/
+  left: 3px; /*по левому*/
+  bottom: 7px; /*и нижнему краю*/
+  width: 178px; /*ширина плашки*/
+  height: 60px; /*высота*/
+  background: #000; /*фон плашки*/
+  color: #fff; /*цвет названия*/
+  opacity: 0.8; /*прозрачность плашки*/
+  font-family: arial, sans-serif; /*шрифт названия*/
+  font-size: 12px; /*размер*/
+  padding: 5px; /*отступ от краев плашки*/
+}
+
+.article {
+  margin-bottom: 40px; /*отступ между блоками*/
+}
+
+.r-article { /*отступ между блоками*/
+  margin-bottom: 30px;
+}
+
+.r-article h1 span { 
+  font-size: 26px; /*размер заголовока блока*/
+}
+
+.r-article img {
+  border: 3px solid #808080; /*рамка на картинке*/
+}
+
+.r-article p {
+  font-size: 14px; /*размер текста в блоке*/
+  line-height: 18px; /*межстрочное расстояние*/
+}
+
+.news {
+  margin-bottom: 20px; /*отступ между новостями*/
+}
+
+.news img {
+  float: left;
+  margin-top: 3px;
+}
+
+.news h1 {
+  font-family: arial, sans-serif;
+  font-size: 16px;
+  margin-left: 82px;
+  margin-bottom: 0;
+  color: #333;
+}
+
+.news p {
+  margin-left: 82px;
+  margin-bottom: 5px;
+}
+
+.news .news-date { /*дата новости*/
+  color: #f90;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.fcol {
+  width: 300px; /*ширина блока*/
+  padding: 20px 10px;
+  float: left; /*обтекание*/
+}
+
+.fcol h1 {
+  font-size: 26px;
+  color: #999;
+  font-weight: normal;
+  font-family: georgia, serif;
+}
+
+.photogal ul {
+  list-style: none; /*убираем маркеры списка*/
+  margin: 0; /*убираем внешние отступы*/
+  padding: 0; /*убираем внутренние отступы*/
+}
+
+.photogal ul li {
+  float: left; /*выстраиваем фото в ряд*/
+  margin-right: 15px; /*отступы между фото*/
+  margin-bottom: 10px;
+}
+
+.photogal img {
+  border: 3px solid #808080; /*рамка на фото*/
+}
+
+.links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.links ul li a {
+  color: #ccc;
+  font-style: italic;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.links ul li a:hover {
+  text-decoration: underline;
+}
+
+.contacts p {
+  color: #ccc;
+  font-family: georgia, serif;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.contacts a {
+  color: #ccc;
+}
+
+.copy {
+  margin: 0;
+  padding: 20px 0;
+  text-align: center;
+  color: #ccc;
+  font-size: 12px;
+  font-style: italic;
+}
+
+/*правое меню*/
+
+.right-menu ul {
+  font: 26px georgia, serif;
+  padding: 0;
+  margin-bottom: 35px;
+  list-style: none;
+}
+
+.right-menu ul li {
+  margin-bottom: 15px;
+}
+
+.right-menu ul li.current a{
+	background: green;
+	color: #fff;
+}
+
+.right-menu ul li a {
+  text-decoration: none;
+  background: #f3f3f3;
+  display: block;
+  color: #000;
+  padding: 5px 10px;
+}
+
+.right-menu ul li a:hover {
+  background: #060;
+  color: #fff;
+}
+
+/*хлебные крошки*/
+
+.breadcrumbs {
+  padding: 5px 10px 0;
+}
+
+.breadcrumbs span {
+  color: #808080;
+  font-family: georgia, serif;
+  font-style: italic;
+  text-transform: lowercase;
+  font-size: 19px;
+}
+
+.breadcrumbs span a {
+  text-decoration: none;
+  color: #aaa;
+}
+
+.breadcrumbs span a:hover {
+  color: #808080;
+  text-decoration: underline;
+}
+
+/*карточка товара*/
+
+.next { /*листалка*/
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+.next a {
+  color: #808080;
+  font-family: arial, sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.next a:hover {
+  text-decoration: underline;
+}
+
+/*фотографии товара*/
+
+.card-images {
+  width: 296px;
+  float: left;
+  margin-top: 4px;
+}
+
+.card-images img {
+  border: 3px solid #808080;
+}
+
+/*описание*/
+
+.card-description {
+  margin-left: 306px;
+}
+
+.card-description h1 span {
+  font-size: 24px;
+}
+
+.card-description h2 {
+  font-family: arial, sans-serif;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card-description p {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.card-description .price {
+  color: #060;
+  font-size: 40px;
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+/* формы */
+
+input {
+width: 300px;
+padding: 5px;
+border: 1px solid #ccc;
+margin-right: 5px;
+font-size: 20px;
+}
+
+textarea {
+width: 600px;
+padding: 5px;
+border: 1px solid #ccc;
+font: 12pt Arial, sans-serif;
+overflow: auto; /* убираем вертикальную прокрутку в ие */
+}
+
+input.button {
+width: 150px;
+padding: 5px;
+border: 1px solid #ccc;
+font-size: 20px;
+font: 12pt Arial, sans-serif;
+cursor: pointer;
+}
